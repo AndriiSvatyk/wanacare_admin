@@ -11,6 +11,7 @@ interface Professional {
   id: number;
   name: string;
   lastname?: string;
+  fullName?: string;
   email: string;
   phone?: string;
   active_account: string;

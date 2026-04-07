@@ -314,12 +314,12 @@ export default function ProfessionalDetailPage() {
         {/* Service Types */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold mb-4">Tipos de servicio</h2>
-          {professional.service_types && Array.isArray(professional.service_types) && professional.service_types.length > 0 ? (
+          {Array.isArray(professional.service_types) && professional.service_types.length > 0 ? (
             <p className="text-gray-900">
-              {professional.service_types.map((st, index) => (
+              {professional.service_types.map((st, index, arr) => (
                 <span key={st.id}>
                   {st.name}
-                  {index < professional.service_types.length - 1 && ', '}
+                  {index < arr.length - 1 && ', '}
                 </span>
               ))}
             </p>
